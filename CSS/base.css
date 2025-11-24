@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variaveis */
+:root {
+    --preto: #000;
+    --branco: #FFFFFF;
+    --marrom: #EB5E28;
+    --marrom-dark: #252422;
+    --gradiente: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(37, 36, 34, 1) 100%);
+    --shadow: rgba(0, 0, 0, 0.468) 0px 5px 15px;
+    --fundo: rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para impedir de selecionar imagens e arrastá-las pela tela */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Barra de rolagem */
+body::-webkit-scrollbar {
+    width: 5px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--marrom-dark);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--marrom);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: none;
+    /* creates padding around scroll thumb */
+}
+
+/* Animações */
+/* Animação 1 - De ladinho*/
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+/* Animação 2 - De baixo*/
+
+.hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transform: translateY(0);
+    transition: all 1s;
+}
+
+.pulsando {
+    animation: pulse 1.5s infinite;
+    /* Defina a duração e a repetição */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Estado inicial: tamanho normal */
+    }
+
+    50% {
+        transform: scale(1.06);
+        /* Estado intermediário: expandido */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Estado final: retorna ao tamanho normal */
+    }
+}
+
+/* Whatsapp Flutuante */
+.flutua{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 99;
+}
+
+.flutua img{
+    width: 100px;
+    transition: 300ms;
+    z-index: 99;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 4px #00000072);
+}
+
+.flutua img:hover{
+    transform: scale(1.1);
+}
+
+/*Footer*/
+
+footer {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: var(--marrom);
+    background-color: var(--preto);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--marrom);
+    transition: 200ms;
+}
+
+footer a:hover {
+    transform: scale(1.1);
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+.container-footer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    color: var(--marrom);
+    gap: 50px;
+}
+
+.container-footer ul {
+    width: 25%;
+    height: 20%;
+    list-style-type: none
+}
+
+.container-footer li {
+    margin-bottom: 10px;
+}
+
+.container-footer h3 {
+    color: var(--marrom);
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#redes {
+    margin-left: 25px;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+#instagram {
+    width: 70px;
+    height: 70px;
+}
+
+#whatsapp {
+    width: 50px;
+    height: 50px;
+}
+
+#copyright {
+    border-top: 2px var(--marrom) solid;
+    text-align: right;
+    /* Alinhe para a direita */
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+    }
+
+    .container-footer ul {
+        padding-left: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+#copyright {
+    text-align: center;
+    /* Alinhe para a direita */
+    background-color: var(--preto);
+    padding: 10px;
+    color: var(--marrom);
+}
+
+#copyright a {
+    color: var(--marrom);
+    transition: 300ms;
+}
+
+#copyright a:hover {
+    color: var(--marrom);
+}

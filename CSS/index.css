@@ -1,0 +1,298 @@
+@import url("base.css");
+
+/* Hero */
+
+header {
+    height: 90vh;
+    width: 100%;
+    background-image: url("../IMG/Header.jpg");
+
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    padding: 100px;
+}
+
+.container-hero {
+    background-color: var(--marrom-dark);
+    width: 50%;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--marrom);
+
+    animation: glow 5s infinite alternate;
+}
+
+.container-hero h1 {
+    color: var(--marrom);
+    font-size: 32px;
+}
+
+.container-hero span {
+    background-color: var(--marrom);
+    color: var(--marrom-dark);
+}
+
+.container-hero p {
+    color: var(--branco);
+    opacity: 50%;
+}
+
+.buttons-hero {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.buttons-hero button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--marrom);
+    cursor: pointer;
+    border-radius: 10px;
+
+    opacity: 70%;
+
+    transition: 300ms;
+}
+
+#solicitar {
+    opacity: 100%;
+    animation: glow 2s infinite alternate;
+}
+
+.buttons-hero button:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #EB5E28, 0 0 10px #EB5E28;
+    }
+
+    100% {
+        box-shadow: 0 0 15px #884023, 0 0 25px #884023;
+    }
+}
+
+/* Especialidades */
+
+.especialidades{
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.container-espe{
+    background-color: var(--marrom-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+
+    border-radius: 20px;
+    border: 1px solid var(--marrom);
+
+    animation: glow 5s infinite alternate;
+}
+
+.container-espe img{
+    width: 20%;
+    padding: 40px;
+}
+
+.container-espe p{
+    font-size: 18px;
+    color: var(--marrom);
+}
+
+.container-espe span{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.objetivos{
+    margin-top: 20px;
+}
+
+.objetivos p{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    
+    margin-top: 5px;
+}
+
+.objetivos img{
+    width: 20px;
+    padding: 0px;
+}
+
+/* Planos */
+
+.planos{
+    background-color: var(--preto);
+    color: var(--marrom);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding: 100px;
+}
+
+.title-planos{
+    text-align: center;
+}
+
+.title-planos p{
+    opacity: 75%;
+}
+
+.container-planos{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.plano-item{
+    background-color: var(--marrom-dark);
+    padding: 40px;
+    border: 1px solid var(--marrom);
+    border-radius: 20px;
+}
+
+.destaque{
+    position: relative;
+    top: -55px;
+    color: var(--marrom-dark);
+    text-align: center;
+    height: 0px;
+}
+
+.destaque .texto{
+    background-color: var(--marrom);
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 12px;
+    animation: glow 2s infinite alternate;
+}
+
+.plano-name{
+    text-align: center;
+}
+
+.plano-custo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.plano-custo p{
+    opacity: 80%;
+}
+
+.plano-custo span{
+    font-size: 14px;
+}
+
+.plano-info{
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.plano-info p{
+    max-width: 300px;
+    width: 100%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid var(--marrom);
+}
+
+.plano-info img{
+    width: 20px;
+    padding: 0px;
+}
+
+.plano-button button{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--marrom);
+    animation: glow 2s infinite alternate;
+
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.plano-button button:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width: 940px) {
+
+    header{
+        padding: 40px;
+    }
+
+    .container-hero{
+        width: 100%;
+    }
+
+    .especialidades{
+        padding: 40px;
+    }
+
+    .container-espe{
+        flex-direction: column;
+    }
+
+    .container-espe img{
+        width: 100%;
+    }
+
+    .objetivos img{
+        width: 20px;
+    }
+
+    .container-planos{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .plano-item{
+        width: 100%;
+    }
+
+    .plano-info p{
+        max-width: none;
+    }
+}
